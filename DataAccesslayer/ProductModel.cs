@@ -1,6 +1,6 @@
 ﻿namespace DataAccesslayer
 {
-    public class ProductModel
+    public interface IProductModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
