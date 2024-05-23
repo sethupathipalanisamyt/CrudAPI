@@ -12,8 +12,9 @@ namespace DataAccesslayer
     public class ProductRepository
     {
       
-        public ProductRepository() { 
-        
+        public ProductRepository() 
+        { 
+
         }
 
     }
