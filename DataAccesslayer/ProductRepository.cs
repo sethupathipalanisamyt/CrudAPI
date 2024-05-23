@@ -25,7 +25,7 @@ namespace DataAccesslayer
                 var gst = product.Price * 10 / 100;
                 product.Gst = gst;
 
-                var Insertsql = $"Insert  into Product values('{product.Name}','{product.Price}','{product.Gst}','{product.Weight}','{product.Description}')";
+                var Insertsql = ($"exec InsertProduct'{product.Name}',{product.Price},{product.Gst},{product.Weight},'{product.Description}'");
 
                 DAL.Open();
                 DAL.Execute(Insertsql);
