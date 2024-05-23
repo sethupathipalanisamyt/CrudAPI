@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using DataAccesslayer;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -9,6 +10,13 @@ namespace CrudAPI.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
+        ProductRepository prodrep;
+
+        public ProductController()
+        {
+            prodrep=new ProductRepository();
+        }
+
         // GET: api/<ProductController>
         [HttpGet]
         public IEnumerable<string> Get()
@@ -25,8 +33,9 @@ namespace CrudAPI.Controllers
 
         // POST api/<ProductController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] ProductModel value)
         {
+            prodrep.Insert(value);
         }
 
         // PUT api/<ProductController>/5

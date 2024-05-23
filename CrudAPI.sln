@@ -5,22 +5,42 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudAPI", "CrudAPI\CrudAPI.csproj", "{9AF425EF-AA20-41C6-80AE-7C8302F2F79B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccesslayer", "DataAccesslayer\DataAccesslayer.csproj", "{38408A2F-744D-4517-86F7-5CEFB19E6547}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccesslayer", "DataAccesslayer\DataAccesslayer.csproj", "{38408A2F-744D-4517-86F7-5CEFB19E6547}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Dataaccesslayer|Any CPU = Dataaccesslayer|Any CPU
+		Dataaccesslayer|ARM32 = Dataaccesslayer|ARM32
 		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM32 = Debug|ARM32
 		Release|Any CPU = Release|Any CPU
+		Release|ARM32 = Release|ARM32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AF425EF-AA20-41C6-80AE-7C8302F2F79B}.Dataaccesslayer|Any CPU.ActiveCfg = Dataaccesslayer|Any CPU
+		{9AF425EF-AA20-41C6-80AE-7C8302F2F79B}.Dataaccesslayer|Any CPU.Build.0 = Dataaccesslayer|Any CPU
+		{9AF425EF-AA20-41C6-80AE-7C8302F2F79B}.Dataaccesslayer|ARM32.ActiveCfg = Dataaccesslayer|Any CPU
+		{9AF425EF-AA20-41C6-80AE-7C8302F2F79B}.Dataaccesslayer|ARM32.Build.0 = Dataaccesslayer|Any CPU
 		{9AF425EF-AA20-41C6-80AE-7C8302F2F79B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9AF425EF-AA20-41C6-80AE-7C8302F2F79B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AF425EF-AA20-41C6-80AE-7C8302F2F79B}.Debug|ARM32.ActiveCfg = Debug|Any CPU
+		{9AF425EF-AA20-41C6-80AE-7C8302F2F79B}.Debug|ARM32.Build.0 = Debug|Any CPU
 		{9AF425EF-AA20-41C6-80AE-7C8302F2F79B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AF425EF-AA20-41C6-80AE-7C8302F2F79B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AF425EF-AA20-41C6-80AE-7C8302F2F79B}.Release|ARM32.ActiveCfg = Release|Any CPU
+		{9AF425EF-AA20-41C6-80AE-7C8302F2F79B}.Release|ARM32.Build.0 = Release|Any CPU
+		{38408A2F-744D-4517-86F7-5CEFB19E6547}.Dataaccesslayer|Any CPU.ActiveCfg = Dataaccesslayer|Any CPU
+		{38408A2F-744D-4517-86F7-5CEFB19E6547}.Dataaccesslayer|Any CPU.Build.0 = Dataaccesslayer|Any CPU
+		{38408A2F-744D-4517-86F7-5CEFB19E6547}.Dataaccesslayer|ARM32.ActiveCfg = Dataaccesslayer|ARM32
+		{38408A2F-744D-4517-86F7-5CEFB19E6547}.Dataaccesslayer|ARM32.Build.0 = Dataaccesslayer|ARM32
 		{38408A2F-744D-4517-86F7-5CEFB19E6547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{38408A2F-744D-4517-86F7-5CEFB19E6547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38408A2F-744D-4517-86F7-5CEFB19E6547}.Debug|ARM32.ActiveCfg = Debug|ARM32
+		{38408A2F-744D-4517-86F7-5CEFB19E6547}.Debug|ARM32.Build.0 = Debug|ARM32
 		{38408A2F-744D-4517-86F7-5CEFB19E6547}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38408A2F-744D-4517-86F7-5CEFB19E6547}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38408A2F-744D-4517-86F7-5CEFB19E6547}.Release|ARM32.ActiveCfg = Release|ARM32
+		{38408A2F-744D-4517-86F7-5CEFB19E6547}.Release|ARM32.Build.0 = Release|ARM32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
