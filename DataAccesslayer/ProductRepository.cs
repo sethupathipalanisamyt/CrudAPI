@@ -43,9 +43,28 @@ namespace DataAccesslayer
 
         }
 
-        public void Insert()
+        public IEnumerable<ProductModel> List()
         {
-            throw new NotImplementedException();
+            try
+            {
+                var Showall = $"exec List";
+                DAL.Open();
+                IEnumerable<ProductModel> result = DAL.Query<ProductModel>(Showall);
+                DAL.Close();
+                if (result != null)
+                {
+                    return result;
+                }
+                
+            }
+            catch (SqlException ex)
+            { 
+                Console.WriteLine(ex.Message);
+            }
+            catch(Exception ex) 
+            {
+            Console.WriteLine(ex.Message);
+            }
         }
     }
 }
