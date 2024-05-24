@@ -43,27 +43,79 @@ namespace DataAccesslayer
 
         }
 
-        public IEnumerable<ProductModel> List()
+        //public IEnumerable<ProductModel> Showall()
+        //{
+        //    try
+        //    {
+        //        var Showallquery = $"exec List";
+        //        DAL.Open();
+        //        var result = DAL.Query<ProductModel>(Showallquery);
+        //        DAL.Close();
+        //           if(result != null || result.Count()!=0)
+        //           {
+        //                return result;
+        //           }              
+        //    }
+        //    catch (SqlException ex)
+        //    { 
+        //        Console.WriteLine(ex.Message);
+        //    }
+        //    catch(Exception ex) 
+        //    {
+        //    Console.WriteLine(ex.Message);
+        //    }
+        //}
+        public void Put(Decimal Price, string Name)
         {
             try
             {
-                var Showall = $"exec List";
-                DAL.Open();
-                IEnumerable<ProductModel> result = DAL.Query<ProductModel>(Showall);
-                DAL.Close();
-                if (result != null)
+               
+                if (Price !=0 && Name.Length !=0 )
                 {
-                    return result;
+                    var Gst = Price * 10 / 100;
+
+                    var Update = ($"exec Put '{Name}',{Price},{Gst}");
+                    DAL.Open();
+                    DAL.Execute(Update);
+                    DAL.Close();
                 }
-                
+                else
+                {
+
+                }
+               
+
             }
             catch (SqlException ex)
-            { 
+            {
                 Console.WriteLine(ex.Message);
             }
-            catch(Exception ex) 
+            catch(Exception ex)
             {
-            Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.Message);
+            }
+            
+        }
+        public void Delete(string Name)
+        {
+            try
+            {
+                if(Name !=null && Name.Length !=0)
+                {
+                    var Delete = ($"exec Spremove '{Name}'");
+                    DAL.Open();
+                    DAL.Execute(Delete);
+                    DAL.Close();
+                }
+
+            }
+            catch(SqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            catch( Exception ex )
+            {
+                throw new Exception(ex.Message);
             }
         }
     }

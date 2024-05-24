@@ -39,15 +39,18 @@ namespace CrudAPI.Controllers
         }
 
         // PUT api/<ProductController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut("(Update price)")]
+        public void Put(decimal Price, [FromBody] string Name)
         {
+            prodrep.Put(Price, Name);
         }
 
         // DELETE api/<ProductController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete()]
+        public void Delete(string Name)
         {
+            prodrep.Delete(Name);
+
         }
     }
 }
