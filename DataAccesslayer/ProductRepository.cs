@@ -43,28 +43,31 @@ namespace DataAccesslayer
 
         }
 
-        //public IEnumerable<ProductModel> Showall()
-        //{
-        //    try
-        //    {
-        //        var Showallquery = $"exec List";
-        //        DAL.Open();
-        //        var result = DAL.Query<ProductModel>(Showallquery);
-        //        DAL.Close();
-        //           if(result != null || result.Count()!=0)
-        //           {
-        //                return result;
-        //           }              
-        //    }
-        //    catch (SqlException ex)
-        //    { 
-        //        Console.WriteLine(ex.Message);
-        //    }
-        //    catch(Exception ex) 
-        //    {
-        //    Console.WriteLine(ex.Message);
-        //    }
-        //}
+        public IEnumerable<ProductModel> Showall()
+        {
+            IEnumerable<ProductModel> result = Enumerable.Empty<ProductModel>();
+
+            try
+            {
+                var showAllQuery = "exec List";
+                DAL.Open();
+                result = DAL.Query<ProductModel>(showAllQuery);
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                DAL.Close();
+            }
+
+            return result;
+        }
         public void Put(Decimal Price, string Name)
         {
             try
@@ -117,6 +120,7 @@ namespace DataAccesslayer
             {
                 throw new Exception(ex.Message);
             }
+           
         }
     }
 }

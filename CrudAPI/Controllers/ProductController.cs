@@ -19,9 +19,10 @@ namespace CrudAPI.Controllers
 
         // GET: api/<ProductController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<ProductModel> Get()
         {
-            return new string[] { "value1", "value2" };
+
+            return prodrep.Showall();
         }
 
         // GET api/<ProductController>/5
