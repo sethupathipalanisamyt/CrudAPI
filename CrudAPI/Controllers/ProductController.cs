@@ -26,10 +26,10 @@ namespace CrudAPI.Controllers
         }
 
         // GET api/<ProductController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("(GetById)")]
+        public IEnumerable<ProductModel> Get(int id)
         {
-            return "value";
+            return prodrep.GetbyId(id);
         }
 
         // POST api/<ProductController>

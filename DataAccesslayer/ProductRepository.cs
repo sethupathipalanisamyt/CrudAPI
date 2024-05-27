@@ -122,5 +122,33 @@ namespace DataAccesslayer
             }
            
         }
+        public IEnumerable<ProductModel> GetbyId(int Id)
+        {
+            IEnumerable<ProductModel> result = Enumerable.Empty<ProductModel>();
+
+            try
+            {
+                var showAllQuery = ($"exec Getmyid {Id}");
+                DAL.Open();
+                result = DAL.Query<ProductModel>(showAllQuery);
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                DAL.Close();
+            }
+            
+            
+
+            return result;
+
+        }
     }
 }
